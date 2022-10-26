@@ -14,6 +14,13 @@ router.get("/getUsersData", UserController.getUsersData)
 
 router.post("/createBook", BookController.createBook  )
 
-router.get("/getBooksData", BookController.getBooksData)
+// router.get("/getBooksData", BookController.getBooksData)
+
+router.get("/bookList", BookController.list)
+router.post("/booksIn", BookController.booksInYear)
+
+router.post("/getParticularBooks",BookController.partiBooks)
+router.get("/getXINRBooks",BookController.Indian)
+router.get("/getRandomBooks",BookController.ranbook)
 
 module.exports = router;

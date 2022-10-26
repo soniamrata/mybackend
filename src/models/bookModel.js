@@ -10,6 +10,9 @@ const bookSchema = new mongoose.Schema( {
         indianPrice: String,
         europePrice: String,
     },
+    stockAvaible : Boolean,
+    year : {type : String, default: "2021"},
+    totalPages : String,
     sales: {type: Number, default: 10}
 }, { timestamps: true });
 
