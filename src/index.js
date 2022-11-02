@@ -21,6 +21,16 @@ app.use (
   }
   );
 
+  app.use (
+    function (req,res,next){
+        let ip=req.ip
+        let url= req.url
+        let timestamp = Date()
+        console.log(timestamp,ip,url)
+        res.send({timestamp:timestamp, ip:ip, route:url})
+    }
+  )
+
 app.use('/', route);
 
 
